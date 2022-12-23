@@ -1,0 +1,9 @@
+<div class="card">
+    <h5 class="card-header">REVIEWS</h5>
+    <div class="card-body">
+        <ul class="list-group list-group-flush" *ngFor="let r of review">
+            <li class="list-group-item"><b>{{r.comment}}</b> posted by {{r.user}} rating:{{r.rating}}</li>
+            <hr>
+          </ul>
+    </div>
+  </div>

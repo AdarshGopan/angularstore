@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4 mt-5" style="background-color: darkcyan;">
+            <form action="" [formGroup]="loginform" class="border p-4" (ngSubmit)="handlelogin()">
+                <h1 style="margin-left: 30%;">LOGIN</h1>
+                <div class="mb-3">
+                    <input type="text" placeholder="USERNAME" class="form-control" formControlName="username">
+                    <div class="form-text text-danger" *ngIf="username && username.invalid && username.touched">INVALID USERNAME</div>
+                </div>
+                <div class="mb-3">
+                    <input type="password" placeholder="PASSWORD" class="form-control" formControlName="password">
+                    <div class="form-text text-danger" *ngIf="password && password.invalid && password.touched">INVALID PASSWORD</div>
+
+                </div>
+                <div class="mb-3">
+                    <input type="submit" class="btn btn-info form-control" value="LOGIN" [disabled]="loginform.invalid">
+                </div>
+                <hr style="color: black;border-width: 4px;">
+                <h6 style="color: white;">Create New Account - CLICK</h6>
+                <button style="margin-left: 70%;margin-top: -60px; background-color: gold;" class="btn" (click)="newChange()">SIGNUP</button>
+            </form>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>

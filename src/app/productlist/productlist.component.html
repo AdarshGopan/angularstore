@@ -1,0 +1,24 @@
+<app-categorieslist></app-categorieslist>
+<div class="container">
+    <div class="row">
+      <H1 style="color: darkcyan;margin-left: 30%;">FASHION STORE</H1>
+        <div class="col-4" *ngFor="let p of products">
+            <div class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem;height: 90%;">
+                <img src="{{p.image}}"style="height: 280px;" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{p.name}}</h5>
+                  <!-- <p class="card-text">{{p.description}}</p> -->
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><b>PRICE:</b>{{p.price}}$</li>
+                  <li class="list-group-item">{{p.category}}</li>
+                  <!-- <li class="list-group-item">{{p.rating.rate}}</li> -->
+                </ul>
+                <div class="card-body">
+                  <a (click)=redirectToProductDetail(p.id) class="card-link btn btn-info">VIEW MORE</a>
+                  <!-- <a href="#" class="card-link">Another link</a> -->
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
